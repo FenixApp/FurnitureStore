@@ -7,7 +7,22 @@
 
 import SwiftUI
 
+/// Главный экран
 struct MainView: View {
+    
+    private struct Constants {
+        static let imageUrlStrings = [
+            "https://catherineasquithgallery.com/uploads/posts/2021-03/1614645206_91-p-fon-divana-dlya-fotoshopa-108.png",
+            "https://vsememy.ru/kartinki/wp-content/uploads/2023/03/1641179913_4-papik-pro-p-divan-risunok-detskii-4.png",
+            "https://i.pinimg.com/originals/d2/8f/34/d28f34f7f9d64c4795b60345621f184c.png"
+        ]
+        static let logoText = "169.ru"
+        static let logoImage = "Logo"
+        static let getStarted = "Get Started"
+        static let haveAcc = "Don't have an account?"
+        static let signIn = "Sign in here"
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -28,21 +43,35 @@ struct MainView: View {
         VStack {
             Spacer()
                 .frame(height: 30)
-            Text("169.ru")
+            Text(Constants.logoText)
                 .font(.system(size: 40))
                 .fontWeight(.heavy)
                 .foregroundStyle(.white)
-            Image("Logo")
+            AsyncImage(url: imageUrl) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            } placeholder: {
+                ZStack {
+                    Image(Constants.logoImage)
+                    Rectangle()
+                        .fill(.white.opacity(0.0))
+                        .overlay {
+                            ProgressView()
+                        }
+                }
+            }
+            .frame(width: 290, height: 212)
         }
     }
     
     private var getStartedButton: some View {
         NavigationLink {
-            Text("")
+            DetailView()
         } label: {
             ZStack {
                 Color(.white)
-                Text("Get Started")
+                Text(Constants.getStarted)
                     .fontWeight(.bold)
                     .foregroundStyle(.linearGradient(colors: [.appGreen, .appLightGreen], startPoint: .top, endPoint: .bottom))
                     .font(.system(size: 24))
@@ -55,16 +84,16 @@ struct MainView: View {
     
     private var signInView: some View {
         VStack {
-            Text("Don't have an account?")
+            Text(Constants.haveAcc)
                 .font(.system(size: 16))
                 .fontWeight(.bold)
                 .foregroundStyle(.white)
             Spacer()
                 .frame(height: 10)
             NavigationLink {
-                Text("")
+                AuthorizationView()
             } label: {
-                Text("Sign in here")
+                Text(Constants.signIn)
                     .font(.system(size: 28))
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
@@ -75,6 +104,10 @@ struct MainView: View {
                 .padding(.zero)
                 .overlay(.white)
         }
+    }
+    
+    private var imageUrl: URL? {
+        URL(string: Constants.imageUrlStrings.randomElement() ?? Constants.logoImage)
     }
 }
 

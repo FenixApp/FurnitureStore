@@ -11,6 +11,10 @@
 		C4E16FB22BE9349600FB005B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FB12BE9349600FB005B /* MainView.swift */; };
 		C4E16FB42BE9349800FB005B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E16FB32BE9349800FB005B /* Assets.xcassets */; };
 		C4E16FB72BE9349800FB005B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E16FB62BE9349800FB005B /* Preview Assets.xcassets */; };
+		C4E16FBE2BEA87F500FB005B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FBD2BEA87F500FB005B /* DetailView.swift */; };
+		C4E16FC02BEAAC4400FB005B /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FBF2BEAAC4400FB005B /* AuthorizationView.swift */; };
+		C4E16FC22BEAAE4100FB005B /* AuthorisationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */; };
+		C4E16FC42BEAC4B100FB005B /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC32BEAC4B100FB005B /* VerificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		C4E16FB12BE9349600FB005B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C4E16FB32BE9349800FB005B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E16FB62BE9349800FB005B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C4E16FBD2BEA87F500FB005B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C4E16FBF2BEAAC4400FB005B /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorisationViewModel.swift; sourceTree = "<group>"; };
+		C4E16FC32BEAC4B100FB005B /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				C4E16FAF2BE9349600FB005B /* FurnitureStoreApp.swift */,
 				C4E16FB12BE9349600FB005B /* MainView.swift */,
+				C4E16FBF2BEAAC4400FB005B /* AuthorizationView.swift */,
+				C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */,
+				C4E16FC32BEAC4B100FB005B /* VerificationView.swift */,
+				C4E16FBD2BEA87F500FB005B /* DetailView.swift */,
 				C4E16FB32BE9349800FB005B /* Assets.xcassets */,
 				C4E16FB52BE9349800FB005B /* Preview Content */,
 			);
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E16FB22BE9349600FB005B /* MainView.swift in Sources */,
+				C4E16FBE2BEA87F500FB005B /* DetailView.swift in Sources */,
+				C4E16FC02BEAAC4400FB005B /* AuthorizationView.swift in Sources */,
+				C4E16FC42BEAC4B100FB005B /* VerificationView.swift in Sources */,
 				C4E16FB02BE9349600FB005B /* FurnitureStoreApp.swift in Sources */,
+				C4E16FC22BEAAE4100FB005B /* AuthorisationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
