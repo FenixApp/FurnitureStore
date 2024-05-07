@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C4E16FB02BE9349600FB005B /* FurnitureStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FAF2BE9349600FB005B /* FurnitureStoreApp.swift */; };
-		C4E16FB22BE9349600FB005B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FB12BE9349600FB005B /* ContentView.swift */; };
+		C4E16FB22BE9349600FB005B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FB12BE9349600FB005B /* MainView.swift */; };
 		C4E16FB42BE9349800FB005B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E16FB32BE9349800FB005B /* Assets.xcassets */; };
 		C4E16FB72BE9349800FB005B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E16FB62BE9349800FB005B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		C4E16FAC2BE9349600FB005B /* FurnitureStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E16FAF2BE9349600FB005B /* FurnitureStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureStoreApp.swift; sourceTree = "<group>"; };
-		C4E16FB12BE9349600FB005B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C4E16FB12BE9349600FB005B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C4E16FB32BE9349800FB005B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E16FB62BE9349800FB005B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				C4E16FAF2BE9349600FB005B /* FurnitureStoreApp.swift */,
-				C4E16FB12BE9349600FB005B /* ContentView.swift */,
+				C4E16FB12BE9349600FB005B /* MainView.swift */,
 				C4E16FB32BE9349800FB005B /* Assets.xcassets */,
 				C4E16FB52BE9349800FB005B /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E16FB22BE9349600FB005B /* ContentView.swift in Sources */,
+				C4E16FB22BE9349600FB005B /* MainView.swift in Sources */,
 				C4E16FB02BE9349600FB005B /* FurnitureStoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
