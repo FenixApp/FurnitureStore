@@ -28,6 +28,8 @@ struct DetailView: View {
         static let descriptionText = "A sofa in a modern style is furniture without lush omate decor. It has a simple or even futuristic appearance and sleek design."
     }
     
+    @Environment(\.presentationMode) var presenter
+    
     var body: some View {
         ZStack {
             Color.white
@@ -36,6 +38,9 @@ struct DetailView: View {
                 ImageView
                 DescriptionView
             }
+        }
+        .onTapGesture {
+            UIApplication.shared.endEditing()
         }
     }
     
@@ -116,6 +121,7 @@ struct DetailView: View {
     
     private var buyNowButtonView: some View {
         Button {
+            presenter.wrappedValue.dismiss()
         } label: {
             ZStack {
                 Color(.white)

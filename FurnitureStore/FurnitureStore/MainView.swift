@@ -24,20 +24,18 @@ struct MainView: View {
     }
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                LinearGradient(colors: [.appLightGreen, .appGreen], startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
-                VStack(spacing: 100) {
-                    headView
-                    getStartedButton
-                    signInView
-                    Spacer()
-                }
+        ZStack {
+            LinearGradient(colors: [.appLightGreen, .appGreen], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            VStack(spacing: 100) {
+                headView
+                getStartedButton
+                signInView
+                Spacer()
             }
         }
-        
     }
+
     
     private var headView: some View {
         VStack {
@@ -66,8 +64,8 @@ struct MainView: View {
     }
     
     private var getStartedButton: some View {
-        NavigationLink {
-            DetailView()
+        Button {
+            isShowDetailView = true
         } label: {
             ZStack {
                 Color(.white)
@@ -80,6 +78,9 @@ struct MainView: View {
         .frame(width: 300, height: 55)
         .clipShape(RoundedRectangle(cornerRadius: 26))
         .shadow(color: .appGreen, radius: 2, x: 0.0, y: 3.0)
+        .fullScreenCover(isPresented: $isShowDetailView, content: {
+            DetailView()
+        })
     }
     
     private var signInView: some View {
@@ -90,8 +91,8 @@ struct MainView: View {
                 .foregroundStyle(.white)
             Spacer()
                 .frame(height: 10)
-            NavigationLink {
-                AuthorizationView()
+            Button {
+                signUpPresent = true
             } label: {
                 Text(Constants.signIn)
                     .font(.system(size: 28))
@@ -99,6 +100,9 @@ struct MainView: View {
                     .foregroundStyle(.white)
                     .padding(.bottom, -5)
             }
+            .fullScreenCover(isPresented: $signUpPresent, content: {
+                AuthorizationView()
+            })
             Divider()
                 .frame(width: 150, height: 1, alignment: .center)
                 .padding(.zero)
@@ -109,6 +113,9 @@ struct MainView: View {
     private var imageUrl: URL? {
         URL(string: Constants.imageUrlStrings.randomElement() ?? Constants.logoImage)
     }
+    
+    @State private var signUpPresent = false
+    @State private var isShowDetailView = false
 }
 
 #Preview {

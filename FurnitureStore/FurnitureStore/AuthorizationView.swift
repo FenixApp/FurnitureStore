@@ -30,15 +30,18 @@ struct AuthorizationView: View {
     @ObservedObject var viewModel = AuthorisationViewModel()
     @State var totalPasswordChars = 0
     @State var lastPasswordText = ""
-    @FocusState var phoneIsFocused: Bool
-    @FocusState var passwordIsFocused: Bool
+    @FocusState var isPhoneFocused: Bool
+    @FocusState var isPasswordFocused: Bool
     
     var body: some View {
-        NavigationView {
+        NavigationView(content: {
             VStack {
                 Spacer()
                     .frame(height: 1)
                 mainView
+            }
+            .onTapGesture {
+                UIApplication.shared.endEditing()
             }
             .frame(width: UIScreen.main.bounds.width)
             .background(
@@ -47,22 +50,23 @@ struct AuthorizationView: View {
                 }
                     .ignoresSafeArea(.all, edges: .all)
             )
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading:
-                                Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }, label: {
-            Image(systemName: Constants.chevronImage)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+                                    Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Image(systemName: Constants.chevronImage)
+            })
+                                        .foregroundStyle(.gray)
+            )
         })
-                                    .foregroundStyle(.gray)
-        )
+        
     }
     
     @State private var phoneNumberText = ""
     @State private var passwordText = ""
-    @State private var forgotAlertIsShow = false
-    @State private var passwordAlertIsShow = false
+    @State private var isForgotAlertShow = false
+    @State private var isPasswordAlertShow = false
     
     private var mainView: some View {
         VStack {
@@ -96,14 +100,14 @@ struct AuthorizationView: View {
             Spacer()
                 .frame(height: 24)
             Button(action: {
-                forgotAlertIsShow = true
+                isForgotAlertShow = true
             }) {
                 Text(Constants.forgotPassword)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundStyle(.appGreen)
             }
-            .alert(Constants.help, isPresented: $forgotAlertIsShow, actions: {
+            .alert(Constants.help, isPresented: $isForgotAlertShow, actions: {
             }, message: {
                 Text(Constants.phoneNumber)
             })
@@ -161,9 +165,6 @@ struct AuthorizationView: View {
         }
     }
     
-    
-    
-    
     private var phoneTextFieldView: some View {
         TextField(Constants.phoneTextfield, text: $phoneNumberText)
             .font(.title2)
@@ -172,7 +173,7 @@ struct AuthorizationView: View {
             }
             .keyboardType(.phonePad)
             .textContentType(.telephoneNumber)
-            .focused($phoneIsFocused)
+            .focused($isPhoneFocused)
     }
     
     private var passwordTextFieldView: some View {
@@ -187,14 +188,14 @@ struct AuthorizationView: View {
                         .font(.title2.bold())
                 }
             }
-            .focused($passwordIsFocused)
+            .focused($isPasswordFocused)
             .onChange(of: passwordText) { text in
                 totalPasswordChars = text.count
                 if totalPasswordChars <= 15 {
                     lastPasswordText = text
                 } else {
                     passwordText = lastPasswordText
-                    passwordIsFocused = false
+                    isPasswordFocused = false
                 }
             }
             Button(action: {
@@ -233,7 +234,7 @@ struct AuthorizationView: View {
                     .font(.system(size: 20).bold())
                     .foregroundStyle(.appGreen)
                     .padding(.bottom, 5)
-                    .alert(Constants.error, isPresented: $passwordAlertIsShow, actions: {
+                    .alert(Constants.error, isPresented: $isPasswordAlertShow, actions: {
                     }, message: {
                         Text(Constants.makePassword)
                     })

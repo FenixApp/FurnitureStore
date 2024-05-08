@@ -15,6 +15,7 @@
 		C4E16FC02BEAAC4400FB005B /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FBF2BEAAC4400FB005B /* AuthorizationView.swift */; };
 		C4E16FC22BEAAE4100FB005B /* AuthorisationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */; };
 		C4E16FC42BEAC4B100FB005B /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC32BEAC4B100FB005B /* VerificationView.swift */; };
+		C4E16FC72BEBBD9A00FB005B /* Extension+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC62BEBBD9A00FB005B /* Extension+UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C4E16FBF2BEAAC4400FB005B /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorisationViewModel.swift; sourceTree = "<group>"; };
 		C4E16FC32BEAC4B100FB005B /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		C4E16FC62BEBBD9A00FB005B /* Extension+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIApplication.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */,
 				C4E16FC32BEAC4B100FB005B /* VerificationView.swift */,
 				C4E16FBD2BEA87F500FB005B /* DetailView.swift */,
+				C4E16FC52BEBBD6D00FB005B /* Extension */,
 				C4E16FB32BE9349800FB005B /* Assets.xcassets */,
 				C4E16FB52BE9349800FB005B /* Preview Content */,
 			);
@@ -77,6 +80,14 @@
 				C4E16FB62BE9349800FB005B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4E16FC52BEBBD6D00FB005B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C4E16FC62BEBBD9A00FB005B /* Extension+UIApplication.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 				C4E16FC02BEAAC4400FB005B /* AuthorizationView.swift in Sources */,
 				C4E16FC42BEAC4B100FB005B /* VerificationView.swift in Sources */,
 				C4E16FB02BE9349600FB005B /* FurnitureStoreApp.swift in Sources */,
+				C4E16FC72BEBBD9A00FB005B /* Extension+UIApplication.swift in Sources */,
 				C4E16FC22BEAAE4100FB005B /* AuthorisationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

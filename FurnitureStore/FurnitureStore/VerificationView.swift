@@ -31,21 +31,33 @@ struct VerificationView: View {
         case lastNumber
     }
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        ZStack {
-            LinearGradient(colors: [.appLightGreen, .appGreen], startPoint: .leading, endPoint: .trailing)
-                .ignoresSafeArea()
-            mainContentView
-                .onAppear {
-                    focused = .firstNumber
-                }
-                .onTapGesture {
-                    focused = nil
-                }
-        }
+        NavigationView(content: {
+            ZStack {
+                LinearGradient(colors: [.appLightGreen, .appGreen], startPoint: .leading, endPoint: .trailing)
+                    .ignoresSafeArea()
+                mainContentView
+                    .onAppear {
+                        focused = .firstNumber
+                    }
+                    .onTapGesture {
+                        focused = nil
+                    }
+            }
+        })
         .ignoresSafeArea(.keyboard)
         .navigationTitle(Constants.verification)
         .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+                                Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }, label: {
+            Image(systemName: Constants.chevronImage)
+        })
+                                    .foregroundStyle(.gray)
+        )
     }
     
     @Environment(\.dismiss) private var dismiss
@@ -54,7 +66,7 @@ struct VerificationView: View {
     @State private var thirdNumber = ""
     @State private var lastNumber = ""
     @State private var randomNumber = ""
-    @State private var sendSmsAlertShow = false
+    @State private var isSendSmsAlertShow = false
     @FocusState private var focused: FieldFocusNumber?
     
     private var mainContentView: some View {
@@ -220,14 +232,14 @@ struct VerificationView: View {
                 .frame(height: 7)
             Button(action: {
                 randomNumber = String(Int.random(in: 1000...9999))
-                sendSmsAlertShow = true
+                isSendSmsAlertShow = true
             }, label: {
                 Text(Constants.sendAgain)
                     .font(.system(size: 20))
                     .foregroundStyle(.appGreen)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             })
-            .alert(isPresented: $sendSmsAlertShow) {
+            .alert(isPresented: $isSendSmsAlertShow) {
                 Alert(
                     title: Text(Constants.fillMessage),
                     message: Text(randomNumber),
