@@ -16,6 +16,17 @@
 		C4E16FC22BEAAE4100FB005B /* AuthorisationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */; };
 		C4E16FC42BEAC4B100FB005B /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC32BEAC4B100FB005B /* VerificationView.swift */; };
 		C4E16FC72BEBBD9A00FB005B /* Extension+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FC62BEBBD9A00FB005B /* Extension+UIApplication.swift */; };
+		C4E16FCD2BECDD9D00FB005B /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FCC2BECDD9D00FB005B /* MainTabBarView.swift */; };
+		C4E16FCF2BECDE7800FB005B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FCE2BECDE7800FB005B /* ProfileView.swift */; };
+		C4E16FD12BECDF0F00FB005B /* GoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FD02BECDF0F00FB005B /* GoodsView.swift */; };
+		C4E16FD32BECDF4500FB005B /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FD22BECDF4500FB005B /* BasketView.swift */; };
+		C4E16FD52BECEF0800FB005B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FD42BECEF0800FB005B /* ProfileViewModel.swift */; };
+		C4E16FD72BECF02100FB005B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FD62BECF02100FB005B /* Profile.swift */; };
+		C4E16FD92BED131300FB005B /* AccountPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FD82BED131300FB005B /* AccountPaymentView.swift */; };
+		C4E16FDB2BED39D100FB005B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FDA2BED39D100FB005B /* Product.swift */; };
+		C4E16FDD2BED3A0A00FB005B /* GoodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FDC2BED3A0A00FB005B /* GoodsViewModel.swift */; };
+		C4E16FDF2BED606C00FB005B /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FDE2BED606C00FB005B /* FilterView.swift */; };
+		C4E16FE12BED791600FB005B /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E16FE02BED791600FB005B /* FilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +40,17 @@
 		C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorisationViewModel.swift; sourceTree = "<group>"; };
 		C4E16FC32BEAC4B100FB005B /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		C4E16FC62BEBBD9A00FB005B /* Extension+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIApplication.swift"; sourceTree = "<group>"; };
+		C4E16FCC2BECDD9D00FB005B /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		C4E16FCE2BECDE7800FB005B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C4E16FD02BECDF0F00FB005B /* GoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsView.swift; sourceTree = "<group>"; };
+		C4E16FD22BECDF4500FB005B /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		C4E16FD42BECEF0800FB005B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C4E16FD62BECF02100FB005B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		C4E16FD82BED131300FB005B /* AccountPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPaymentView.swift; sourceTree = "<group>"; };
+		C4E16FDA2BED39D100FB005B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C4E16FDC2BED3A0A00FB005B /* GoodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsViewModel.swift; sourceTree = "<group>"; };
+		C4E16FDE2BED606C00FB005B /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		C4E16FE02BED791600FB005B /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				C4E16FAF2BE9349600FB005B /* FurnitureStoreApp.swift */,
-				C4E16FB12BE9349600FB005B /* MainView.swift */,
-				C4E16FBF2BEAAC4400FB005B /* AuthorizationView.swift */,
-				C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */,
-				C4E16FC32BEAC4B100FB005B /* VerificationView.swift */,
-				C4E16FBD2BEA87F500FB005B /* DetailView.swift */,
+				C4E16FCA2BECDAF900FB005B /* Model */,
+				C4E16FC92BECDAE000FB005B /* View */,
+				C4E16FC82BECDAAE00FB005B /* ViewModel */,
 				C4E16FC52BEBBD6D00FB005B /* Extension */,
 				C4E16FB32BE9349800FB005B /* Assets.xcassets */,
 				C4E16FB52BE9349800FB005B /* Preview Content */,
@@ -88,6 +108,43 @@
 				C4E16FC62BEBBD9A00FB005B /* Extension+UIApplication.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C4E16FC82BECDAAE00FB005B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4E16FC12BEAAE4100FB005B /* AuthorisationViewModel.swift */,
+				C4E16FD42BECEF0800FB005B /* ProfileViewModel.swift */,
+				C4E16FDC2BED3A0A00FB005B /* GoodsViewModel.swift */,
+				C4E16FE02BED791600FB005B /* FilterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4E16FC92BECDAE000FB005B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4E16FB12BE9349600FB005B /* MainView.swift */,
+				C4E16FCC2BECDD9D00FB005B /* MainTabBarView.swift */,
+				C4E16FD02BECDF0F00FB005B /* GoodsView.swift */,
+				C4E16FD22BECDF4500FB005B /* BasketView.swift */,
+				C4E16FCE2BECDE7800FB005B /* ProfileView.swift */,
+				C4E16FDE2BED606C00FB005B /* FilterView.swift */,
+				C4E16FBF2BEAAC4400FB005B /* AuthorizationView.swift */,
+				C4E16FC32BEAC4B100FB005B /* VerificationView.swift */,
+				C4E16FBD2BEA87F500FB005B /* DetailView.swift */,
+				C4E16FD82BED131300FB005B /* AccountPaymentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4E16FCA2BECDAF900FB005B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4E16FD62BECF02100FB005B /* Profile.swift */,
+				C4E16FDA2BED39D100FB005B /* Product.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,11 +217,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E16FD32BECDF4500FB005B /* BasketView.swift in Sources */,
 				C4E16FB22BE9349600FB005B /* MainView.swift in Sources */,
+				C4E16FDB2BED39D100FB005B /* Product.swift in Sources */,
+				C4E16FCF2BECDE7800FB005B /* ProfileView.swift in Sources */,
+				C4E16FD72BECF02100FB005B /* Profile.swift in Sources */,
 				C4E16FBE2BEA87F500FB005B /* DetailView.swift in Sources */,
 				C4E16FC02BEAAC4400FB005B /* AuthorizationView.swift in Sources */,
+				C4E16FDD2BED3A0A00FB005B /* GoodsViewModel.swift in Sources */,
+				C4E16FCD2BECDD9D00FB005B /* MainTabBarView.swift in Sources */,
+				C4E16FD52BECEF0800FB005B /* ProfileViewModel.swift in Sources */,
+				C4E16FE12BED791600FB005B /* FilterViewModel.swift in Sources */,
+				C4E16FDF2BED606C00FB005B /* FilterView.swift in Sources */,
 				C4E16FC42BEAC4B100FB005B /* VerificationView.swift in Sources */,
 				C4E16FB02BE9349600FB005B /* FurnitureStoreApp.swift in Sources */,
+				C4E16FD12BECDF0F00FB005B /* GoodsView.swift in Sources */,
+				C4E16FD92BED131300FB005B /* AccountPaymentView.swift in Sources */,
 				C4E16FC72BEBBD9A00FB005B /* Extension+UIApplication.swift in Sources */,
 				C4E16FC22BEAAE4100FB005B /* AuthorisationViewModel.swift in Sources */,
 			);

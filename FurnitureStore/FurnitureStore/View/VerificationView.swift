@@ -126,8 +126,6 @@ struct VerificationView: View {
                             focused = .secondNumber
                         }
                     }
-            } else {
-                // Fallback on earlier versions
             }
             if #available(iOS 17.0, *) {
                 TextField("", text: $secondNumber)
@@ -148,8 +146,6 @@ struct VerificationView: View {
                             focused = .firstNumber
                         }
                     }
-            } else {
-                // Fallback on earlier versions
             }
             if #available(iOS 17.0, *) {
                 TextField("", text: $thirdNumber)
@@ -170,8 +166,6 @@ struct VerificationView: View {
                             focused = .secondNumber
                         }
                     }
-            } else {
-                // Fallback on earlier versions
             }
             if #available(iOS 17.0, *) {
                 TextField("", text: $lastNumber)
@@ -192,8 +186,6 @@ struct VerificationView: View {
                             focused = .thirdNumber
                         }
                     }
-            } else {
-                // Fallback on earlier versions
             }
         }
     }

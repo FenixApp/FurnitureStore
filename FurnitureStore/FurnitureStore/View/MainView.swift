@@ -36,7 +36,6 @@ struct MainView: View {
         }
     }
 
-    
     private var headView: some View {
         VStack {
             Spacer()
@@ -65,7 +64,7 @@ struct MainView: View {
     
     private var getStartedButton: some View {
         Button {
-            isShowDetailView = true
+            isShowMainTabBarView = true
         } label: {
             ZStack {
                 Color(.white)
@@ -78,8 +77,8 @@ struct MainView: View {
         .frame(width: 300, height: 55)
         .clipShape(RoundedRectangle(cornerRadius: 26))
         .shadow(color: .appGreen, radius: 2, x: 0.0, y: 3.0)
-        .fullScreenCover(isPresented: $isShowDetailView, content: {
-            DetailView()
+        .fullScreenCover(isPresented: $isShowMainTabBarView, content: {
+            MainTabBarView()
         })
     }
     
@@ -115,7 +114,7 @@ struct MainView: View {
     }
     
     @State private var signUpPresent = false
-    @State private var isShowDetailView = false
+    @State private var isShowMainTabBarView = false
 }
 
 #Preview {

@@ -42,6 +42,7 @@ struct DetailView: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     @State private var review = ""
@@ -116,7 +117,6 @@ struct DetailView: View {
             .padding(.vertical, 24)
             .padding(.horizontal, 20)
         }
-        
     }
     
     private var buyNowButtonView: some View {
