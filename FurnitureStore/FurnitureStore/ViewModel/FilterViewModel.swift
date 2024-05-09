@@ -10,5 +10,5 @@ import SwiftUI
 /// Вью модель для раздела с фильтрами товаров
 class FilterViewModel: ObservableObject {
     @Published var categories = ["BedCategory", "SofaCategory", "ChairCategory"]
-    @Published var colors: [Color] = [.white, .black, .gray, .pink, .orange, .red, .blue, .green, .cyan, .indigo]
+    @Published var colors: [Color] = [.white, .black, .gray, .pink, .orange, .red, .blue, .green, .cyan, .indigo, .brown, .purple, .appBeige, .appBrown, .appDarkGray, .appGoods, .appGray, .appGreen, .appLightGreen, .accentColor]
 }
