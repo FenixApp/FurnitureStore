@@ -24,6 +24,7 @@ struct AuthorizationView: View {
         static let checkVerif = "Check Verification"
         static let error = "Ошибка"
         static let makePassword = "Пароль должен быть больше 6 символов"
+        static let login = "Log in"
     }
     
     @Environment(\.presentationMode) var presentationMode
@@ -60,7 +61,6 @@ struct AuthorizationView: View {
                                         .foregroundStyle(.gray)
             )
         })
-        
     }
     
     @State private var phoneNumberText = ""
@@ -133,14 +133,12 @@ struct AuthorizationView: View {
                 .stroke(.appGray, lineWidth: 2)
                 .frame(width: 150, height: 51)
                 .overlay {
-                    Text("Log in")
+                    Text(Constants.login)
                         .foregroundStyle(
                             LinearGradient(colors: [Color.appGreen, Color.appLightGreen.opacity(0.2)], startPoint: .top, endPoint: .bottom)
                         )
                         .font(.title2.bold())
                 }
-            } else {
-                // Fallback on earlier versions
             }
             
             if #available(iOS 16.0, *) {
@@ -159,8 +157,6 @@ struct AuthorizationView: View {
                         )
                         .font(.title2.bold())
                 }
-            } else {
-                // Fallback on earlier versions
             }
         }
     }
@@ -177,7 +173,6 @@ struct AuthorizationView: View {
     }
     
     private var passwordTextFieldView: some View {
-        
         HStack {
             Group {
                 if viewModel.passwordIsHide {
