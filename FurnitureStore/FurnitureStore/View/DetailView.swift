@@ -34,9 +34,9 @@ struct DetailView: View {
         ZStack {
             Color.white
             VStack {
-                HeadView
-                ImageView
-                DescriptionView
+                headView
+                imageView
+                descriptionView
             }
         }
         .onTapGesture {
@@ -47,7 +47,7 @@ struct DetailView: View {
     
     @State private var review = ""
     
-    private var HeadView: some View {
+    private var headView: some View {
         HStack(spacing: 200) {
             Text(Constants.sofaElda)
                 .font(.system(size: 20))
@@ -61,7 +61,7 @@ struct DetailView: View {
         }
     }
     
-    private var ImageView: some View {
+    private var imageView: some View {
         VStack {
             Image(Constants.sofaImageName)
             Text(Constants.price999)
@@ -76,7 +76,7 @@ struct DetailView: View {
         }
     }
     
-    private var DescriptionView: some View {
+    private var descriptionView: some View {
         ZStack {
             LinearGradient(colors: [.appLightGreen, .appGreen], startPoint: .top, endPoint: .bottom)
                 .clipShape(RoundedRectangle(cornerRadius: 14))

@@ -90,7 +90,7 @@ struct VerificationView: View {
                         continueButtonView
                         Spacer()
                             .frame(height: 20)
-                        sendSMSagainView
+                        sendSmsAgainView
                         Spacer()
                     }
                 }
@@ -216,7 +216,7 @@ struct VerificationView: View {
         .shadow(color: .gray, radius: 2, x: 0.0, y: 3.0)
     }
     
-    private var sendSMSagainView: some View {
+    private var sendSmsAgainView: some View {
         VStack {
             Text(Constants.didntSms)
                 .font(.system(size: 20))
