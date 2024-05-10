@@ -31,6 +31,7 @@ struct AuthorizationView: View {
     @ObservedObject var viewModel = AuthorisationViewModel()
     @State var totalPasswordChars = 0
     @State var lastPasswordText = ""
+    @State var isShowingVerificationScreen = false
     @FocusState var isPhoneFocused: Bool
     @FocusState var isPasswordFocused: Bool
     
@@ -113,7 +114,9 @@ struct AuthorizationView: View {
             })
             Spacer()
                 .frame(height: 18)
-            checkVerificationView
+            NavigationLink(destination: VerificationView()) {
+                checkVerificationView
+            }
             Spacer()
         }
         .frame(width: UIScreen.main.bounds.width)
@@ -206,7 +209,13 @@ struct AuthorizationView: View {
     }
     
     private var signUpButtonView: some View {
-        Button {} label: {
+        Button {
+            if passwordText.count < 6 {
+                isPasswordAlertShow = true
+            } else {
+                isShowingVerificationScreen = true
+            }
+        } label: {
             Text(Constants.signUp)
                 .padding(.vertical, 20)
                 .padding(.horizontal, 120)
