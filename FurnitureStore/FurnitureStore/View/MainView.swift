@@ -21,6 +21,8 @@ struct MainView: View {
         static let getStarted = "Get Started"
         static let haveAcc = "Don't have an account?"
         static let signIn = "Sign in here"
+        static let getStartedOffsetY = -3500.0
+        static let signInOffsetY = 3500.0
     }
     
     var body: some View {
@@ -80,6 +82,8 @@ struct MainView: View {
         .fullScreenCover(isPresented: $isShowMainTabBarView, content: {
             MainTabBarView()
         })
+        .opacity(isButtonShow ? 1 : 0)
+        .offset(y: isButtonShow ? 0 : Constants.getStartedOffsetY)
     }
     
     private var signInView: some View {
@@ -102,11 +106,18 @@ struct MainView: View {
             .fullScreenCover(isPresented: $signUpPresent, content: {
                 AuthorizationView()
             })
+            .opacity(isButtonShow ? 1 : 0)
+            .offset(y: isButtonShow ? 0 : Constants.signInOffsetY)
             Divider()
                 .frame(width: 150, height: 1, alignment: .center)
                 .padding(.zero)
                 .overlay(.white)
         }
+        .onAppear(perform: {
+            withAnimation(.spring(duration: 1.5, bounce: 0.15, blendDuration: 2)) {
+                isButtonShow = true
+            }
+        })
     }
     
     private var imageUrl: URL? {
@@ -115,6 +126,7 @@ struct MainView: View {
     
     @State private var signUpPresent = false
     @State private var isShowMainTabBarView = false
+    @State private var isButtonShow = false
 }
 
 #Preview {

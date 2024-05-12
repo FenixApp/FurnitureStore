@@ -90,6 +90,7 @@ struct AuthorizationView: View {
                 .fontWeight(.bold)
                 .padding(.trailing, 280)
                 .foregroundStyle(.appGreen)
+                .modifier(ShakeEffect(shakes: isPasswordAlertShow ? 2 : 0))
             passwordTextFieldView
             Divider()
                 .frame(maxHeight: 1)
@@ -203,15 +204,17 @@ struct AuthorizationView: View {
                     .foregroundStyle(.appGreen)
             }
         }
+        .modifier(ShakeEffect(shakes: isPasswordAlertShow ? 2 : 0))
         .padding(.leading, 20)
         .padding(.trailing, 20)
-        
     }
     
     private var signUpButtonView: some View {
         Button {
             if passwordText.count < 6 {
-                isPasswordAlertShow = true
+                withAnimation {
+                    isPasswordAlertShow = true
+                }
             } else {
                 isShowingVerificationScreen = true
             }
@@ -249,6 +252,22 @@ struct AuthorizationView: View {
         }
     }
 }
+
+struct ShakeEffect: GeometryEffect {
+        func effectValue(size: CGSize) -> ProjectionTransform {
+            return ProjectionTransform(CGAffineTransform(translationX: -30 * sin(position * 2 * .pi), y: 0))
+        }
+
+        init(shakes: Int) {
+            position = CGFloat(shakes)
+        }
+
+        var position: CGFloat
+        var animatableData: CGFloat {
+            get { position }
+            set { position = newValue }
+        }
+    }
 
 #Preview {
     AuthorizationView()
