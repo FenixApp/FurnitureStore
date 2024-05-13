@@ -94,6 +94,10 @@ struct VerificationView: View {
                         Spacer()
                     }
                 }
+                .blur(radius: isSendSmsAlertShow ? 5 : 0)
+                if isSendSmsAlertShow {
+                    messageInstructionView
+                }
         }
     }
     
