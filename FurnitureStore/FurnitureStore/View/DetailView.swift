@@ -29,6 +29,19 @@ struct DetailView: View {
     }
     
     @Environment(\.presentationMode) var presenter
+    @State var scale: CGFloat = 1
+    
+    var magnification: some Gesture {
+        MagnificationGesture()
+            .onChanged({ value in
+                scale = value
+            })
+            .onEnded { _ in
+                withAnimation {
+                    scale = 1
+                }
+            }
+    }
     
     var body: some View {
         ZStack {
@@ -36,9 +49,11 @@ struct DetailView: View {
             VStack {
                 headView
                 imageView
+                    .scaleEffect(scale)
                 descriptionView
             }
         }
+        .gesture(magnification)
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
